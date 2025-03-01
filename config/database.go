@@ -33,7 +33,7 @@ var DB *gorm.DB
 func InitDB() {
 	// Retrieve database configuration from environment variables with default values.
 	dbUser := GetEnv("DB_USER", "user")
-	dbPassword := GetEnv("DB_PASSWORD", "password")
+	dbPassword := GetEnv("DB_PASSWORD", "")
 	dbHost := GetEnv("DB_HOST", "db")
 	dbPort := GetEnv("DB_PORT", "3306")
 	dbName := GetEnv("DB_NAME", "contactsdb")
