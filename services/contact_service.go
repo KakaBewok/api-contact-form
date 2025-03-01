@@ -15,15 +15,10 @@ import (
 
 // ContactService defines the business logic interface for contact operations.
 type ContactService interface {
-	// CreateContact creates a new contact based on the provided request.
 	CreateContact(req *requests.ContactRequest) (*models.Contact, error)
-	// GetAllContacts retrieves all non-deleted contacts.
 	GetAllContacts() ([]models.Contact, error)
-	// GetContactByID retrieves a single contact by its ID.
 	GetContactByID(id uint) (*models.Contact, error)
-	// UpdateContact updates an existing contact identified by its ID.
 	UpdateContact(id uint, req *requests.ContactRequest) (*models.Contact, error)
-	// DeleteContact marks a contact as deleted based on its ID.
 	DeleteContact(id uint) error
 }
 
